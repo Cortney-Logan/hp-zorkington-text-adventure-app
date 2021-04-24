@@ -35,8 +35,8 @@ body {
 }
 
 h1 {
-  /* font-family: "Harry P", sans-serif; */
-  font-family: "Lumos", arial;
+  font-family: "Harry P", sans-serif;
+  /* font-family: "Lumos", arial; */
   font-size: 5.5rem;
   color: #e7a035;
   margin: 0;
@@ -45,8 +45,8 @@ h1 {
 }
 
 h2 {
-  /* font-family: "Harry P", sans-serif; */
-  font-family: "Lumos", arial;
+  font-family: "Harry P", sans-serif;
+  /* font-family: "Lumos", arial; */
   font-size: 4rem;
   color: #e7a035;
   margin: 0;
