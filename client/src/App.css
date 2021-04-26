@@ -3,7 +3,7 @@
 
 @import url("https://fonts.cdnfonts.com/css/harry-p");
 
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap");
 
 /* -------------------- Global -------------------- */
 
@@ -11,7 +11,7 @@ body {
   margin: auto;
   background-image: url("./components/images/the-great-hall.png");
   background-size: auto 125vh;
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
   position: relative;
 }
 .App {
@@ -25,13 +25,39 @@ body {
 }
 
 /* -------------------- Header -------------------- */
-
 #header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* position: absolute; */
+}
+
+#title {
+  align-self: center;
+  position: relative;
+  left: 0;
+  transform: translateX(0);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 30px;
+}
+
+.header-button {
+  font-family: "Lumos", arial;
+  /* font-family: inherit; */
+  width: 300px;
+  font-size: 30px;
+  font-style: bold;
+  background-color: transparent;
+  border: transparent;
+  color: #e7a035;
+}
+
+.header-button:hover {
+  color: white;
+  cursor: pointer;
 }
 
 h1 {
@@ -60,6 +86,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 #text-area {
@@ -77,11 +104,11 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align:center;
+  text-align: center;
 }
 
 .button {
-  font-family: inherit;
+  font-family: "Lumos", arial;
   font-size: 50px;
   font-style: bold;
   background-color: transparent;
@@ -94,39 +121,76 @@ h2 {
   cursor: pointer;
 }
 
-#description{
-font-size: 2rem;
-
+#description {
+  font-size: 2rem;
 }
 
-#details{
+#details {
   font-size: 1.5rem;
 }
 
+/* -------------------- Instructions -------------------- */
+
+#instruction-modal {
+  position: absolute;
+  background-color: black;
+  color: #e7a035;
+  font-family: "EB Garamond", serif;
+  /* height: 75vh; */
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+#instruction-container{
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+#instruction-body{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  align-items: space-between;
+}
+
+.instruction-column{
+  width: 30vw;
+  text-align: center;
+  margin: 10px;
+}
+
 /* -------------------- Inventory -------------------- */
-#inventory-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80vw;
-    height: 175px;
-   background-color:rgba(116, 116, 116, 0.5);;
+#inventory-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  height: 175px;
+  background-color: rgba(116, 116, 116, 0.5);
 }
 
-#inventory-container h3{
-    color: #e7a035;
-    font-size: 2rem;
-    padding: 0;
-    margin: 0;
+#inventory-container h3 {
+  color: #e7a035;
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
 }
 
-#inventory{
-    display: flex;
-    align-items: center;
-    color: white;
+#inventory {
+  display: flex;
+  align-items: center;
+  color: white;
 }
 
-.inventory-item{
-    height: 100px;
-    padding: 1vw;
+.inventory-item {
+  height: 100px;
+  padding: 1vw;
 }

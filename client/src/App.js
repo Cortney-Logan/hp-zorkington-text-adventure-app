@@ -48,22 +48,27 @@ function App() {
 
           // sorting hat's response with chosen house
           setDetails(
-            `Welcome, welcome, one and all
-        the show is about to start
+            `"Welcome, welcome, one and all
+        the show is about to start.
+
         I'm the Hogwarts Sorting Hat
-        and it's time to play my part
+        and it's time to play my part.
+
         You may call me worn and ragged
-        if that's all you truly see
+        if that's all you truly see.
+
         But listen close and I will tell
         where you're supposed to be!
+
         Go ahead and try me on
-        there's nothing left to fear
+        there's nothing left to fear.
+        
         I'll find right where you belong
         by looking between your ears!
   
         .....
   
-        ${chosenHouse}!`
+        ${chosenHouse}!"`
           );
 
           // sets the house in player object
@@ -399,10 +404,12 @@ function App() {
   destroy it.`);
 
   // sets game details, which show below room description to player
-  const [
-    details,
-    setDetails,
-  ] = useState(`To play, click "Enter". Then enter commands to move about the castle like "move north" or "move south". Interact with objects with commands like "examine", "greet", "read" or "take", for example "greet hat". Move about the castle and interact with enchanted objects to defeat Voldemort once and for all!`);
+  const [details, setDetails] = useState(
+    `To play, click "Enter". Then enter commands to move about the castle like "move north" or "move south". Interact with objects with commands like "examine", "greet", "read" or "take", for example "greet hat". Move about the castle and interact with enchanted objects to defeat Voldemort once and for all!`
+  );
+
+  // sets instructions model to show or not
+  const [instructions, setInstructions] = useState("hidden");
 
   // item key - given a string input maps to the corresponding item object
   const [itemKey, setItemKey] = useState({
@@ -583,7 +590,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Header />
+        <Header instructions={instructions} setInstructions={setInstructions} />
         <PlayContainer
           player={player}
           setPlayer={setPlayer}
@@ -593,6 +600,8 @@ function App() {
           playerMove={playerMove}
           details={details}
           setDetails={setDetails}
+          instructions={instructions}
+          setInstructions={setInstructions}
         />
       </header>
     </div>
