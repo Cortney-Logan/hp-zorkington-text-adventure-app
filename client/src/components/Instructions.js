@@ -1,7 +1,6 @@
 function Instructions(props) {
   return (
-    <div id="instruction-modal" style={{ visibility: props.instructions }}>
-      {/* <h2>~How To Play~</h2> */}
+    <div className="modal" style={{ visibility: props.instructions }}>
       <div id="instruction-container">
         <div>
           The game is played based on by player commands. After starting the
@@ -25,12 +24,9 @@ function Instructions(props) {
               or requirements to enter these rooms, interact with objects for
               clues.
             </p>
+            <h3>Look Around Rooms</h3>
             <p>
-              You can
-              <i>
-                <b>look around</b>
-              </i>
-              a room to see a list of the objects currently in the room.
+              Use the command <i><b>look around</b></i> to see a list of the items currently in the room.
             </p>
           </div>
 

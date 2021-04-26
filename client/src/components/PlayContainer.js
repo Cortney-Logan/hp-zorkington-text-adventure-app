@@ -1,7 +1,8 @@
 import TextArea from "./TextArea.js";
 import PlayerInput from "./PlayerInput.js";
-import Inventory from "./Inventory.js"
-import Instructions from "./Instructions"
+import Inventory from "./Inventory.js";
+import Instructions from "./Instructions";
+import About from "./About.js";
 
 function PlayContainer(props) {
   return (
@@ -24,8 +25,12 @@ function PlayContainer(props) {
         startGame={props.startGame}
         playerMove={props.playerMove}
       />
-      <Inventory inventory={props.player.inventory}/>
-      <Instructions instructions={props.instructions} setInstructions={props.setInstructions}/>
+      <Inventory inventory={props.player.inventory} />
+      <Instructions
+        instructions={props.instructions}
+        setInstructions={props.setInstructions}
+      />
+      <About about={props.about} setAbout={props.setAbout} />
     </div>
   );
 }

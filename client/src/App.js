@@ -62,7 +62,7 @@ function App() {
 
         Go ahead and try me on
         there's nothing left to fear.
-        
+
         I'll find right where you belong
         by looking between your ears!
   
@@ -411,6 +411,9 @@ function App() {
   // sets instructions model to show or not
   const [instructions, setInstructions] = useState("hidden");
 
+  // sets About model to show or not
+  const [about, setAbout] = useState("hidden");
+
   // item key - given a string input maps to the corresponding item object
   const [itemKey, setItemKey] = useState({
     treacletart: treacleTart,
@@ -590,7 +593,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Header instructions={instructions} setInstructions={setInstructions} />
+        <Header instructions={instructions} setInstructions={setInstructions} about={about} setAbout={setAbout}/>
         <PlayContainer
           player={player}
           setPlayer={setPlayer}
@@ -602,6 +605,8 @@ function App() {
           setDetails={setDetails}
           instructions={instructions}
           setInstructions={setInstructions}
+          about={about}
+          setAbout={setAbout}
         />
       </header>
     </div>

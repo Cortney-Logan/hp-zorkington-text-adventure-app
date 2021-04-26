@@ -7,7 +7,7 @@ function Header(props) {
         <h1>Harry Potter</h1>
         <h2>and the Text Adventure Game</h2>
       </div>
-      <button className="header-button">About</button>
+      <button className="header-button" onClick={()=>props.setAbout("visible")}>About</button>
     </div>
   );
 }

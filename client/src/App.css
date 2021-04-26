@@ -131,7 +131,7 @@ h2 {
 
 /* -------------------- Instructions -------------------- */
 
-#instruction-modal {
+.modal {
   position: absolute;
   background-color: black;
   color: #e7a035;
@@ -151,7 +151,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 #instruction-body{
@@ -165,6 +165,15 @@ h2 {
   width: 30vw;
   text-align: center;
   margin: 10px;
+}
+
+#about-container{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#title-text{
+  font-family: "Harry P", sans-serif;
 }
 
 /* -------------------- Inventory -------------------- */
